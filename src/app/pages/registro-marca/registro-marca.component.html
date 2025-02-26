@@ -1,0 +1,54 @@
+<!-- Navbar -->
+<nav class="bg-yellow-400 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+      <span class="text-black font-bold text-xl">LOGO</span>
+      <button routerLink="/login" class="text-black font-bold">Inicio</button>
+  </div>
+</nav>
+
+<!-- Sección de Registro de Marca -->
+<div class="flex justify-center items-center mt-10">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-[600px]">
+      <h2 class="text-xl font-semibold mb-4 text-center">
+          Hola, te pedimos algunos datos para crear una cuenta de marca
+      </h2>
+
+      <form (submit)="registrarMarca(); $event.preventDefault()">
+          <div class="grid grid-cols-2 gap-4">
+              <input type="text" [(ngModel)]="nombreComercial" name="nombreComercial" placeholder="Nombre Comercial" class="border px-4 py-2 rounded-lg">
+              <input type="text" [(ngModel)]="telefonoEmpresa" name="telefonoEmpresa" placeholder="Teléfono de la empresa" class="border px-4 py-2 rounded-lg">
+              <input type="text" [(ngModel)]="cif" name="cif" placeholder="CIF" class="border px-4 py-2 rounded-lg">
+              <button class="bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold">Upload</button>
+              <button class="bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold">Identificación Oficial</button>
+          </div>
+
+          <h3 class="mt-6 font-semibold">Dirección</h3>
+          <div class="grid grid-cols-2 gap-4 mt-2">
+              <input type="text" [(ngModel)]="calle" name="calle" placeholder="Calle" class="border px-4 py-2 rounded-lg">
+              <input type="text" [(ngModel)]="numeroExt" name="numeroExt" placeholder="Número exterior" class="border px-4 py-2 rounded-lg">
+              <input type="text" [(ngModel)]="numeroInt" name="numeroInt" placeholder="Número interior" class="border px-4 py-2 rounded-lg">
+              <input type="text" [(ngModel)]="colonia" name="colonia" placeholder="Colonia" class="border px-4 py-2 rounded-lg">
+              <input type="text" [(ngModel)]="codigoPostal" name="codigoPostal" placeholder="Código Postal" class="border px-4 py-2 rounded-lg">
+          </div>
+
+          <div class="mt-4">
+              <label class="flex items-center">
+                  <input type="checkbox" [(ngModel)]="aceptaTerminos" name="aceptaTerminos" class="mr-2">
+                  <span class="text-sm text-gray-600">Acepto los Términos y condiciones</span>
+              </label>
+              <label class="flex items-center mt-2">
+                  <input type="checkbox" [(ngModel)]="recibeInfo" name="recibeInfo" class="mr-2">
+                  <span class="text-sm text-gray-600">Acepto recibir información por correo</span>
+              </label>
+              <br>
+              <center>
+                  <button type="submit" class="bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold">
+                      Crear Marca
+                  </button>
+              </center>
+          </div>
+      </form>
+  </div>
+</div>
+
+

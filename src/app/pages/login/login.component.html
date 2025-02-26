@@ -1,0 +1,48 @@
+<div id="content" class="flex justify-center items-center min-h-screen bg-gray-100">
+  <!-- Sección de Login -->
+  <div id="loginSection" class="bg-white w-full max-w-4xl flex shadow-lg rounded-lg">
+      <div class="w-1/2 hidden md:block">
+          <img src="assets/imagen-mecanico.webp" alt="Imagen Login" class="w-full h-full object-cover rounded-l-lg">
+      </div>
+      <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+          <h2 class="text-2xl font-semibold mb-4">Inicia sesión</h2>
+          <form (submit)="login(); $event.preventDefault()">
+              <input type="text" [(ngModel)]="email" name="email" placeholder="Email o nombre de usuario"
+                class="w-full mb-3 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-400">
+
+              <input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña"
+                class="w-full mb-3 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-400">
+
+              <div class="flex items-center justify-between mb-4">
+                  <label class="flex items-center">
+                      <input type="checkbox" [(ngModel)]="rememberMe" name="rememberMe" class="mr-2">
+                      <span class="text-gray-600 text-sm">Recuérdame</span>
+                  </label>
+                  <a href="#" class="text-sm text-gray-500 hover:underline">¿Olvidaste tu contraseña?</a>
+              </div>
+
+              <button type="submit"
+                class="w-full bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600">
+                Iniciar Sesión
+              </button>
+          </form>
+
+          <p class="text-center mt-4 text-sm">
+            ¿No tienes una cuenta?
+            <a routerLink="/registro-marca" class="text-yellow-500 font-bold">Regístrate</a>
+          </p>
+
+          <div class="flex justify-center gap-3 mt-4">
+            <button class="bg-white border px-4 py-2 rounded-lg flex items-center shadow hover:bg-gray-100 transition">
+                <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" class="w-5 h-5 mr-2"> Google
+            </button>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center shadow hover:bg-blue-700 transition">
+                <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" class="w-5 h-5 mr-2"> Facebook
+            </button>
+            <button class="bg-black text-white px-4 py-2 rounded-lg flex items-center shadow hover:bg-gray-900 transition">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732229.png" class="w-5 h-5 mr-2"> Apple
+            </button>
+          </div>
+      </div>
+  </div>
+</div>

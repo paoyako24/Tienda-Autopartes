@@ -1,0 +1,32 @@
+<!-- Navbar -->
+<nav class="bg-yellow-400 p-4 flex justify-between items-center shadow">
+  <div class="text-lg font-bold">LOGO</div>
+  <input type="text" placeholder="Buscar..." class="px-4 py-2 border rounded-lg">
+  <a routerLink="/busqueda-vendedor" class="text-black font-bold px-4 py-2 border rounded-lg">
+      Regístrate
+  </a>
+  <button (click)="cerrarSesion()" class="bg-black text-white px-4 py-2 rounded-lg">
+      Cerrar Sesión
+  </button>
+</nav>
+
+<!-- Banner -->
+<nav class="bg-blue-600 p-4 flex justify-center items-center">
+  <div class="text-lg text-white font-bold text-center">
+      ¡¡¡ ENCUENTRA LA LLANTA QUE DESEAS A UN PRECIO ÚNICO !!!
+  </div>
+</nav>
+
+<!-- Categorías -->
+<h2 class="text-lg font-semibold mt-6 mb-4">Categorías</h2>
+<div class="grid grid-cols-5 gap-4">
+  <div *ngFor="let categoria of categorias" class="text-center bg-gray-100 rounded-lg p-2">
+      <img [src]="categoria.imagen" class="mx-auto rounded-lg">
+      <p>{{ categoria.nombre }}</p>
+      <h3>Ver Todo</h3>
+  </div>
+</div>
+
+<!-- Tiendas Oficiales -->
+<h2 class="text-lg font-semibold mt-6 mb-4">Tiendas Oficiales</h2>
+<div class="grid grid-cols-5 gap-4">
