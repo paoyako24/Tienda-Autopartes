@@ -1,0 +1,55 @@
+<!-- Navbar -->
+<nav class="bg-yellow-400 p-4 flex justify-between items-center">
+  <div class="text-2xl font-bold">LOGO</div>
+  <input type="text" placeholder="Buscar..." class="px-4 py-2 border rounded-lg">
+  <div class="flex space-x-4">
+      <a routerLink="/cart" class="font-bold">🛒 Carrito</a>
+      <a routerLink="/login" class="font-bold">👤 Cuenta</a>
+  </div>
+</nav>
+
+<!-- Checkout -->
+<div class="container mx-auto mt-8 p-4 bg-white rounded-lg shadow-lg">
+  <h2 class="text-xl font-bold mb-4">Termina tu compra</h2>
+
+  <div class="grid grid-cols-2 gap-4">
+      <!-- Datos de contacto -->
+      <div>
+          <h3 class="font-bold">Contacto</h3>
+          <input [(ngModel)]="contacto.email" type="email" placeholder="Correo electrónico" class="w-full p-2 border rounded-lg my-2">
+          <input [(ngModel)]="contacto.telefono" type="tel" placeholder="Teléfono" class="w-full p-2 border rounded-lg my-2">
+
+          <h3 class="font-bold mt-4">Datos para entrega</h3>
+          <div class="grid grid-cols-2 gap-2">
+              <input [(ngModel)]="direccion.nombre" type="text" placeholder="Nombre" class="p-2 border rounded-lg">
+              <input [(ngModel)]="direccion.apellido" type="text" placeholder="Apellido" class="p-2 border rounded-lg">
+              <input [(ngModel)]="direccion.calle" type="text" placeholder="Calle" class="p-2 border rounded-lg col-span-2">
+              <input [(ngModel)]="direccion.numeroExt" type="text" placeholder="Número exterior" class="p-2 border rounded-lg">
+              <input [(ngModel)]="direccion.numeroInt" type="text" placeholder="Número interior" class="p-2 border rounded-lg">
+              <input [(ngModel)]="direccion.colonia" type="text" placeholder="Colonia" class="p-2 border rounded-lg">
+              <input [(ngModel)]="direccion.codigoPostal" type="text" placeholder="Código postal" class="p-2 border rounded-lg">
+              <input [(ngModel)]="direccion.ciudad" type="text" placeholder="Ciudad" class="p-2 border rounded-lg">
+              <select [(ngModel)]="direccion.estado" class="p-2 border rounded-lg col-span-2">
+                  <option value="">Selecciona estado</option>
+                  <option value="CDMX">CDMX</option>
+                  <option value="Jalisco">Jalisco</option>
+                  <option value="Monterrey">Monterrey</option>
+              </select>
+          </div>
+      </div>
+
+      <!-- Resumen de compra -->
+      <div class="bg-gray-100 p-4 rounded-lg">
+          <h3 class="font-bold">Resumen de compra</h3>
+          <p>Subtotal: ${{ subtotal | number:'1.2-2' }} MXN</p>
+          <p>Envío: ${{ envio | number:'1.2-2' }} MXN</p>
+          <p class="font-bold">Total: ${{ total | number:'1.2-2' }} MXN</p>
+
+          <h3 class="font-bold mt-4">Pago</h3>
+          <input [(ngModel)]="pago.titular" type="text" placeholder="Titular de la tarjeta" class="w-full p-2 border rounded-lg my-2">
+          <input [(ngModel)]="pago.numeroTarjeta" type="text" placeholder="Número de tarjeta" class="w-full p-2 border rounded-lg my-2">
+          <button (click)="comprar()" class="bg-black text-white py-2 w-full rounded-lg mt-4">Comprar</button>
+          <button class="bg-yellow-400 text-white py-2 w-full rounded-lg mt-2">Compra 100% segura</button>
+      </div>
+  </div>
+</div>
