@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app.routing.module';
-import { FormsModule } from '@angular/forms'; // Para [(ngModel)]
-import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms'; // ✅ NECESARIO PARA ngModel
+import { CommonModule } from '@angular/common'; // ✅ NECESARIO PARA *ngFor y pipes
 
-// Importar los componentes
+import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistroMarcaComponent } from './pages/registro-marca/registro-marca.component';
-import { BusquedaVendedorComponent } from './pages/busqueda-vendedor/busqueda-vendedor.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
@@ -19,19 +19,27 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
     HomeComponent,
     LoginComponent,
     RegistroMarcaComponent,
-    BusquedaVendedorComponent,
     TiendaComponent,
     CartComponent,
     CheckoutComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,  // ✅ NECESARIO PARA ngModel
+    CommonModule  // ✅ NECESARIO PARA *ngFor y pipes
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
+
+
+
+
 
 
