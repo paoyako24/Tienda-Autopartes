@@ -6,9 +6,9 @@
       <p class="font-semibold">{{ producto.nombre }}</p>
     </div>
     <div class="flex items-center space-x-2">
-      <button (click)="producto.cantidad = Math.max(1, producto.cantidad - 1)" class="px-2 py-1 bg-gray-300 rounded">-</button>
+      <button (click)="disminuirCantidad(i)" class="px-2 py-1 bg-gray-300 rounded">-</button>
       <input type="text" [(ngModel)]="producto.cantidad" class="w-10 text-center border">
-      <button (click)="producto.cantidad = producto.cantidad + 1" class="px-2 py-1 bg-gray-300 rounded">+</button>
+      <button (click)="aumentarCantidad(i)" class="px-2 py-1 bg-gray-300 rounded">+</button>
     </div>
     <p class="text-lg font-bold">${{ producto.precio * producto.cantidad | number:'1.2-2' }} MXN</p>
   </div>
