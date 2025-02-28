@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';  // ✅ Importado
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms'; // ✅ NECESARIO PARA ngModel
-import { CommonModule } from '@angular/common'; // ✅ NECESARIO PARA *ngFor y pipes
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';  // ✅ Importado para pipes y *ngFor
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -25,15 +25,17 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule,
+    RouterModule,  // ✅ Necesario para `router-outlet`
     AppRoutingModule,
-    FormsModule,  // ✅ NECESARIO PARA ngModel
-    CommonModule  // ✅ NECESARIO PARA *ngFor y pipes
+    FormsModule,  // ✅ Para `ngModel`
+    CommonModule  // ✅ Para `*ngFor` y `number` pipe
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
 
 
 

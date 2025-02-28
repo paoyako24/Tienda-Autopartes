@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: 'registro-marca', component: RegistroMarcaComponent },
   { path: 'tienda', component: TiendaComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'checkout', component: CheckoutComponent }
+  { path: 'checkout', component: CheckoutComponent },
+  { path: '**', redirectTo: 'login' } // Redirigir a Login cualquier
 ];
 
 @NgModule({
