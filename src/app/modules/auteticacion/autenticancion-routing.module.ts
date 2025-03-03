@@ -1,6 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule,} from '@angular/core';
-import { InicioAutenticacionComponent} from './components/inicio-autenticacion/inicio-autenticacion.component';
+import {InicioAutenticacionComponent} from './components/inicio-autenticacion/inicio-autenticacion.component';
 import {InicioSesionComponent} from './components/inicio-sesion/inicio-sesion.component';
 
 const routes: Routes = [

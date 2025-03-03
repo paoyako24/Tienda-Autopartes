@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.component';
-import { AutenticacionRoutingModule } from './Autenticancion-routing.module';
+import { AutenticacionRoutingModule } from './autenticancion-routing.module';
 
 @NgModule({
   declarations: [

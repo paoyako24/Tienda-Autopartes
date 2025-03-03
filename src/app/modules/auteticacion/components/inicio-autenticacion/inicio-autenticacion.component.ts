@@ -8,6 +8,6 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './inicio-autenticacion.component.html',
   styleUrl: './inicio-autenticacion.component.sass',
 })
-export class LoginAutenticacionComponent {
+export class InicioAutenticacionComponent {
 
 }
