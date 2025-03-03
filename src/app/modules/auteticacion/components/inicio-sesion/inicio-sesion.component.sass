@@ -1,0 +1,32 @@
+$bg-color: #f1f5f9;
+$button-color: #facc15;
+$border-radius: 8px;
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $bg-color;
+
+    .login-box {
+        background: white;
+        padding: 2rem;
+        border-radius: $border-radius;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            background-color: $button-color;
+            padding: 10px;
+            border-radius: $border-radius;
+            font-weight: bold;
+        }
+    }
+}

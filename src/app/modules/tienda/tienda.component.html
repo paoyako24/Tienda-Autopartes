@@ -1,0 +1,77 @@
+<!-- Navbar -->
+<nav class="bg-yellow-400 p-4 flex justify-between items-center shadow">
+  <div class="flex items-center space-x-4">
+      <img src="assets/logo.png" alt="Logo" class="w-20">
+      <input type="text" placeholder="Buscar..." class="px-4 py-2 border rounded-lg">
+  </div>
+  <div class="flex space-x-4">
+      <a routerLink="/registro-marca" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
+          Registrar Marca
+      </a>
+      <button routerLink="/cart" class="bg-white hover:bg-gray-100 text-black font-bold py-2 px-4 rounded-lg">
+          Registra tu compra
+      </button>
+      <img src="assets/perfil.png" alt="Usuario" class="w-10 h-10 rounded-full">
+  </div>
+</nav>
+
+<!-- Contenido Principal -->
+<div class="container mx-auto mt-6 flex">
+
+  <!-- Sidebar de Filtros -->
+  <aside class="w-1/4 bg-white p-4 shadow-lg">
+      <h2 class="text-lg font-semibold">Filtros</h2>
+      <div class="mt-4">
+          <label class="block">
+              <input type="checkbox" class="mr-2"> Llega mañana
+          </label>
+          <label class="block">
+              <input type="checkbox" class="mr-2"> Envío gratis
+          </label>
+          <label class="block">
+              <input type="checkbox" class="mr-2"> Tiendas oficiales
+          </label>
+      </div>
+      <h3 class="mt-6 font-semibold">Marca</h3>
+      <div>
+          <label class="block">
+              <input type="checkbox" class="mr-2"> Bosch
+          </label>
+          <label class="block">
+              <input type="checkbox" class="mr-2"> Champion
+          </label>
+          <label class="block">
+              <input type="checkbox" class="mr-2"> Denso
+          </label>
+          <label class="block">
+              <input type="checkbox" class="mr-2"> NGK
+          </label>
+      </div>
+  </aside>
+
+  <!-- Sección de Productos -->
+  <main class="w-3/4 p-4">
+      <h2 class="text-xl font-bold">Bujía Mazda 3 de 2015</h2>
+      <p class="text-gray-600">880,966 resultados</p>
+
+      <!-- Grid de productos -->
+      <div class="grid grid-cols-3 gap-4 mt-4">
+          <div *ngFor="let producto of productos" class="bg-white p-4 shadow-lg rounded-lg">
+              <img [src]="producto.imagen" alt="{{producto.nombre}}" class="w-full">
+              <p class="font-semibold mt-2">{{ producto.nombre }}</p>
+              <p class="text-gray-600">${{ producto.precio }}</p>
+          </div>
+      </div>
+
+      <!-- Banner Publicitario -->
+      <div class="mt-6 bg-red-600 text-white p-6 text-center rounded-lg">
+          <p class="text-2xl font-bold">Publicidad</p>
+          <p class="text-lg">DEYAC COOLING SYSTEMS</p>
+      </div>
+  </main>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-10 text-center mt-10">
+  <p class="mt-4">&copy; 2025 - Todos los derechos reservados</p>
+</footer>
