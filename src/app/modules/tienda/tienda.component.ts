@@ -1,22 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TarjetaProducto } from '../../models/tarjeta-producto';
+import { TARJETAS_PRODUCTOS_BUSQUEDA } from '../../../assets/constantes/objetos';
+import { FooterComponent } from "../../components/footer/footer.component";
+import { TarjetaProductoComponent } from "../../components/tarjeta-producto/tarjeta-producto.component";
+import { HeaderComponent } from "../../components/header/header.component";
 
 @Component({
   selector: 'app-tienda',
   templateUrl: './tienda.component.html',
-  styleUrls: ['./tienda.component.sass']
+  styleUrl: './tienda.component.sass',
+  imports: [FooterComponent, TarjetaProductoComponent, HeaderComponent]
 })
-export class TiendaComponent {
-  categorias = [
-    { nombre: 'Llantas', imagen: 'assets/imagen/llanta.avif' },
-    { nombre: 'Frenos', imagen: 'assets/imagen/frenos2.webp' },
-    { nombre: 'Rines', imagen: 'assets/imagen/rines.jpg' },
-    { nombre: 'Baterías', imagen: 'assets/imagen/bateria.webp' },
-    { nombre: 'Asientos', imagen: 'assets/imagen/asientos.jpg' }
-  ];
+export class TiendaComponent implements OnInit {
 
-  productos = [
-    { nombre: 'Bujía NGK Platino', precio: 1842, imagen: 'assets/imagen/bujia1.jpg' },
-    { nombre: 'Bujía Bosch Iridium', precio: 1842, imagen: 'assets/imagen/bujia2.jpg' },
-    { nombre: 'Juego de 4 Bujías NGK', precio: 1842, imagen: 'assets/imagen/bujia3.jpg' }
-  ];
+  TARJETAS_PRODUCTOS_BUSQUEDA = TARJETAS_PRODUCTOS_BUSQUEDA;
+
+  public crumbs: string[] = ["Motor", "bujias"];
+  public tarjetaProducto: TarjetaProducto[] = this.TARJETAS_PRODUCTOS_BUSQUEDA;
+
+  constructor() {
+
+  }
+
+  ngOnInit(): void {
+
+  }
+
 }
+
