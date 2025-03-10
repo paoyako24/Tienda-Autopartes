@@ -1,0 +1,77 @@
+@mixin pc
+    @media screen and (max-width: 5000px)
+        @content
+
+@mixin mobile
+    @media screen and (max-width: 1140px)
+        @content
+
+.titulo
+    color: #000000
+    font-size: 29.3px
+    font-weight: 400
+    div
+        @include pc()
+            width: 50%
+        @include mobile()
+            width: 100%
+    div:nth-child(2) img
+        margin-bottom: 10px
+        width: 17px
+
+.descripciones
+    span
+        font-weight: 400
+    span:first-child
+        color: #000000
+        font-size: 16px
+        max-height: 100px
+        height: 100px
+    span:nth-child(2)
+        color: #9A9FA5
+        font-size: 12px
+        height: 20px
+    span:nth-child(3)
+        color: #000000
+        font-size: 23.44px
+
+.recuadro-oferta
+    padding: 0px 35px
+
+.precio-normal
+    text-decoration: 1px line-through solid #FF3E4F
+
+.ranking
+    background: #D8FF00
+    border-radius: 15px
+    display: flex
+    justify-content: space-between
+    padding: 0px 8px
+    width: 54px
+    span
+        color: #000000
+        font-size: 12px
+        font-weight: 400
+    image
+        width: 17px
+
+.ver-todas
+    color: #000000
+    font-size: 23.44px
+    font-weight: 400
+
+.sku
+    span
+        color: #000000
+        font-size: 12px
+        font-weight: 400
+
+.contenido
+    @include pc()
+        overflow-x: none
+    @include mobile()
+        overflow-x: scroll
+
+.container-ver-todas
+    @include mobile()
+        display: none !important
