@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<div class="container-custom-main">
+    <div class="titulo-seccion my-2 mb-3">
+        <span>Carrito de compra</span>
+    </div>
+
+    <div class="seccion-carrito-resumen d-flex">
+        <div class="seccion-carrito">
+            <div class="bloque-seguir-comprando">
+                <img src="assets/imagenes/return.svg" alt="img-return" class="m-2 btn-clic-go">
+                <span class="m-2">Seguir comprando</span>
+            </div>
+            @for (producto of listadoProductosCarritoCompras; track $index) {
+            <app-producto-carrito-compras [producto]="producto"></app-producto-carrito-compras>
+            }
+        </div>
+
+        <div class="seccion-resumen">
+            <app-resumen-compra></app-resumen-compra>
+        </div>
+    </div>
+
+    <app-comprados-habitualmente></app-comprados-habitualmente>
+
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,38 @@
+@mixin pc
+    @media screen and (max-width: 5000px)
+        @content
+
+@mixin mobile
+    @media screen and (max-width: 1140px)
+        @content
+
+.container-categorias
+    user-select: none
+
+.titulo
+    color: #000000
+    font-size: 29.3px
+    font-weight: 400
+
+.descripciones
+    span:first-child
+        color: #000000
+        font-size: 18.75px
+        font-weight: 400
+    span:nth-child(2)
+        color: #0000003C
+        cursor: pointer
+        font-size: 16px
+        font-weight: 400
+
+.recuadro-categoria
+    width: 100%
+
+.img img
+    background-color: white
+
+.contenido
+    @include pc()
+        overflow-x: none
+    @include mobile()
+        overflow-x: scroll

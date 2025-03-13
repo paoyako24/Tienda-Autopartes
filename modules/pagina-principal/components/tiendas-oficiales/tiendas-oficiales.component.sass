@@ -1,0 +1,48 @@
+@mixin pc
+    @media screen and (max-width: 5000px)
+        @content
+
+@mixin mobile
+    @media screen and (max-width: 1140px)
+        @content
+
+.ver-todas
+    color: #000000
+    font-size: 23.44px
+    font-weight: 400
+
+.titulo
+    color: #000000
+    font-size: 29.3px
+    font-weight: 400
+    div
+        @include pc()
+            width: 50%
+        @include mobile()
+            width: 100%
+    div:nth-child(2) img
+        margin-bottom: 10px
+        width: 17px
+
+.contenido
+    @include pc()
+        overflow-x: none
+    @include mobile()
+        overflow-x: scroll
+
+.recuadro-tienda
+    @include mobile()
+        margin-right: 1.5rem !important
+        margin-left: 1.5rem !important
+
+.container-tienda-principal
+    @include mobile()
+        display: none
+
+.container-ver-todas
+    @include mobile()
+        display: none !important
+
+// ::-webkit-scrollbar
+//     width: 0px
+//     background: transparent

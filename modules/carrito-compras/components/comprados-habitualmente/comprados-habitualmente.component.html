@@ -1,0 +1,31 @@
+<div class="container-comprados-habitualmente">
+    <div class="texto-base titulo-seccion mb-1 mt-4">
+        <span>Comprados juntos habitualmente</span>
+    </div>
+
+    <div class="container-productos d-flex">
+        <div class="px-5 col-3">
+            <app-tarjeta-producto [tarjetaProducto]="productos[0]"></app-tarjeta-producto>
+        </div>
+
+        <img src="assets/imagenes/carrito-compras/add-comprados-habitualmente.svg" alt="img-add-comprados">
+
+        <div class="px-5 col-3">
+            <app-tarjeta-producto [tarjetaProducto]="productos[1]"></app-tarjeta-producto>
+        </div>
+
+        <img src="assets/imagenes/carrito-compras/add-comprados-habitualmente.svg" alt="img-add-comprados">
+
+        <div class="px-5 col-3">
+            <app-tarjeta-producto [tarjetaProducto]="productos[2]"></app-tarjeta-producto>
+        </div>
+
+        <div class="px-5 col-2 container-precio-total">
+            <div class="d-grid">
+                <span class="texto-base texto-precio-total mb-2">Precio total:</span>
+                <span class="texto-base texto-monto">$ 850.00 MXN</span>
+                <button class="texto-base btn-agregar-carrito mt-4">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+</div>

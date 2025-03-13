@@ -1,0 +1,37 @@
+<div class="container-producto d-flex justify-content-between">
+
+    <div class="imagen">
+        <img [src]="producto.srcImg" alt="img-agregar-producto">
+    </div>
+
+    <div class="descripcion-producto d-grid">
+        <div class="parte-superior">
+            <span class="texto-descripcion-general">{{producto.descripcion}}</span>
+        </div>
+        <div class="parte-inferior">
+            <span class="texto-secundario">ELIMINAR</span>
+        </div>
+    </div>
+
+    <div class="cantidad-productos d-grid">
+        <div class="parte-superior restar-sumar-producto d-flex">
+            <img src="assets/imagenes/carrito-compras/remover-producto.svg" alt="img-remover-producto">
+            <div class="cantidad-producto-carrito">
+                <span>{{producto.cantidad}}</span>
+            </div>
+            <img src="assets/imagenes/carrito-compras/agregar-producto.svg" alt="img-agregar-producto">
+        </div>
+        <div class="parte-inferior">
+            <span class="texto-secundario">{{producto.stock}} disponible(s)</span>
+        </div>
+    </div>
+
+    <div class="container-precio d-grid">
+        <div class="parte-superior">
+            <span class="texto-activo texto-precio">{{producto.precio}}</span>
+        </div>
+        <div class="parte-inferior">
+            <span class="texto-secundario">Sin cargo por envío</span>
+        </div>
+    </div>
+</div>

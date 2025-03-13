@@ -1,0 +1,89 @@
+<app-header></app-header>
+<div class="container-custom-main container-filtros-busqueda">
+    <div class="barra-principal-crumb">
+        <div class="titulo-busqueda-resultado d-grid">
+            <span>Bujia Mazda 3 de 2015</span>
+            <span>680,896 resultados</span>
+            <div class="container-crumb my-2">
+                @for (crumb of crumbs; track $index) {
+                <span>{{crumb}}</span>
+                @if ($index < crumbs.length - 1){<img src="assets/imagenes/busqueda/arrow-crumb.svg"
+                    alt="img-crumb-{{$index}}">}
+                    }
+            </div>
+        </div>
+    </div>
+    <div class="filtros-resultado-busqueda d-flex">
+        <div class="filtros">
+            <!-- Filtros checkbox - switch -->
+            <div class="filtros-check form-check form-switch">
+                <span class="user-select-none" for="llegar">Llega mañana</span>
+                <input class="form-check-input" type="checkbox" role="switch" id="llegar">
+            </div>
+            <div class="filtros-check form-check form-switch">
+                <span class="user-select-none" for="gratis">Envío gratis</span>
+                <input class="form-check-input" type="checkbox" role="switch" id="gratis">
+            </div>
+            <div class="filtros-check form-check form-switch">
+                <span class="user-select-none" for="oficiales">Tiendas oficiales</span>
+                <input class="form-check-input" type="checkbox" role="switch" id="oficiales">
+            </div>
+
+            <!-- Filtros Marcas -->
+            <div class="filtros-item">
+                <span>Marcas</span>
+                <img src="assets/imagenes/header/arrow.svg">
+            </div>
+
+            <!-- Filtros checkbox -->
+            <div>
+                <div>
+                    <span>Autolite</span>
+                    <input class="form-check-input" type="checkbox" id="autolite">
+                </div>
+                <div>
+                    <span>Bosch</span>
+                    <input class="form-check-input" type="checkbox" id="bosch">
+                </div>
+                <div>
+                    <span>Champion</span>
+                    <input class="form-check-input" type="checkbox" id="champion">
+                </div>
+                <div>
+                    <span>Denso</span>
+                    <input class="form-check-input" type="checkbox" id="denso">
+                </div>
+                <div>
+                    <span>NGK</span>
+                    <input class="form-check-input" type="checkbox" id="ngk">
+                </div>
+            </div>
+
+        </div>
+        <div class="grid-resultados">
+            <div class="header-grid d-flex justify-content-between">
+                <div class="tipo-ordenamiento d-flex justify-content-between">
+                    <span>Ordenar por:</span>
+                    <ul>
+                        <li>Menor precio</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <img src="assets/imagenes/busqueda/space-dashboard.svg" alt="img-space-dashboard">
+                    <img src="assets/imagenes/busqueda/team-dashboard.svg" alt="img-space-dashboard">
+                </div>
+            </div>
+            <div class="grid-productos">
+                <div class="contenido row justify-content-between">
+                    @for (producto of tarjetaProducto; track $index) {
+                    <div class="col-3 mb-5">
+                        <app-tarjeta-producto [tarjetaProducto]="producto"></app-tarjeta-producto>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

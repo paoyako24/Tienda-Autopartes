@@ -1,0 +1,19 @@
+<div class="container-ofertas">
+    <div class="d-flex titulo mb-5 w-100">
+        <div>
+            <span>Ofertas</span>
+        </div>
+        <div class="d-flex justify-content-end container-ver-todas">
+            <span class="me-3 ver-todas">Ver todas</span>
+            <img src="assets/imagenes/pagina-principal/ofertas/arrow.svg" alt="img-arrow">
+        </div>
+    </div>
+
+    <div class="contenido d-flex justify-content-between">
+        @for (oferta of ofertas; track $index) {
+        <div class="col-12 col-sm-12 col-md-6 col-lg-2">
+            <app-tarjeta-producto [tarjetaProducto]="oferta"></app-tarjeta-producto>
+        </div>
+        }
+    </div>
+</div>

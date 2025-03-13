@@ -1,0 +1,21 @@
+<div>
+    <div class="d-flex titulo mb-3 w-100">
+        <div>
+            <span>Tiendas oficiales</span>
+        </div>
+        <div class="d-flex justify-content-end  container-ver-todas">
+            <span class="me-3 ver-todas">Ver todas</span>
+            <img src="assets/imagenes/pagina-principal/ofertas/arrow.svg" alt="img-arrow">
+        </div>
+    </div>
+    <div class="contenido d-flex justify-content-between mb-3">
+        @for (tienda of listadoTiendas; track $index) {
+        <div class="recuadro-tienda col-6 col-sm-6 col-md-2 justify-content-between">
+            <img class="w-100" src="{{tienda.srcImg}}" alt="img-{{$index}}">
+        </div>
+        }
+    </div>
+    <div class="container-tienda-principal">
+        <img class="w-100" src="{{tiendaPrincipal.srcImg}}" alt="img-principal">
+    </div>
+</div>

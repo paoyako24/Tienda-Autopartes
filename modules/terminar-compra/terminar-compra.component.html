@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container-custom-main">
+    <div class="termina-compra mt-2 mb-3 d-grid">
+        <img src="assets/imagenes/return.svg" alt="img-return" class="btn-clic-go">
+        <span>Termina tu compra</span>
+    </div>
+
+    <div class="container-form-resumen d-flex">
+        <div class="container-comprador-envio">
+            <div class="container-datos-comprador">
+                <app-datos-comprador></app-datos-comprador>
+            </div>
+            <div class="container-resumen-articulos mt-3">
+                <app-resumen-articulos></app-resumen-articulos>
+            </div>
+        </div>
+        <div class="container-resumen-compra">
+            <app-resumen-compra [tipoResumenCompra]="'terminarCompra'"></app-resumen-compra>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

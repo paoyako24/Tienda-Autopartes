@@ -1,0 +1,106 @@
+@mixin pc
+    @media screen and (max-width: 5000px)
+        @content
+
+@mixin mobile
+    @media screen and (max-width: 1140px)
+        @content
+        
+.inicio-sesion-form
+    margin: 50px
+
+.form-icon
+    position: relative
+
+    .form-control
+        padding-right: 30px
+
+    .icon
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translate(-25%, -50%)
+        font-size: 20px
+        margin-right: 10px
+        color: #00000099
+
+.titulo-base
+    color: #000000
+    font-size: 29.3px
+    font-weight: 400
+
+.container-titulo-base
+    text-align: left
+    @include mobile()
+        text-align: center
+
+.titulo
+    justify-content: space-between
+    display: flex
+    height: 20px
+    margin: 30px 0px
+    @include mobile()
+        display: none
+
+.form-switch .form-check-input:focus
+    border-color: rgba(0, 0, 0, 0.25)
+    outline: 0
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(0,0,0,0.25)'/></svg>")
+
+.form-switch .form-check-input:checked
+    background-color: #000000
+    border-color: #000000
+    border: none
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>")
+
+.custom-olvidaste-pwd
+    top: -5px
+    position: relative
+
+.custom-tienes-cuenta
+    margin: 25px 0px
+    span
+        line-height: 30px
+
+.boton-registrarse
+    color: white
+    border: none
+    border-radius: 8px
+    background: black
+    font-weight: bold
+    font-size: 12.24px
+    height: 30px
+    letter-spacing: 1.5px
+    margin: 0px 10px
+    padding: 0px 10px
+
+.group-redes-sociales
+    justify-content: space-between
+    margin: 10px 0px
+    width: 100%
+    button
+        border: none
+        border-radius: 8px
+        height: 45px
+        margin: 0px 15px
+        width: 100%
+    .rs-google
+        background-color: #FFFFFF
+        border: 1px solid #00000040
+        margin-left: 0px
+    .rs-facebook
+        background-color: #1877F2
+    .rs-apple
+        background-color: #000000
+        margin-right: 0px
+
+.imagen-portada
+    @include mobile()
+        display: none
+
+.formulario
+    @include pc()
+        width: 50% !important
+    @include mobile()
+        width: 100% !important
