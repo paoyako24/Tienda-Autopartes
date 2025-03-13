@@ -1,0 +1,64 @@
+<div class="container-general">
+    <div class="container-resumen-compra">
+        <div class="titulo-seccion">
+            <span>Resumen de compra</span>
+        </div>
+
+        <div class="seccion-detalle">
+            <div class="parte-subtotal list-custom d-flex justify-content-between">
+                <div class="d-grid">
+                    <span>Subtotal</span>
+                    <span>(4)</span>
+                </div>
+                <span class="montos">$ 1000.00 MXN</span>
+            </div>
+            <div class="parte-envio list-custom d-flex justify-content-between">
+                <span>Envío</span>
+                <span class="montos">$ 250.00 MXN</span>
+            </div>
+            <div class="parte-total d-flex justify-content-between"
+                [ngClass]="{'list-custom': tipoResumenCompra === 'terminarCompra' }">
+                <span>TOTAL</span>
+                <span class="montos">$ 1250.00 MXN</span>
+            </div>
+
+            @if (tipoResumenCompra === 'carritoCompras') {
+            <div class="container-boton-pagar w-100 d-flex justify-content-center">
+                <button class="d-flex boton-pagar" [ngStyle]="{width: '100px'}">Pagar</button>
+            </div>
+            }
+
+            @if (tipoResumenCompra === 'terminarCompra') {
+            <div class="datos-pago d-grid">
+                <span>Todas las transacciones son seguras y están encriptadas</span>
+                <input type="text" class="form-control mt-3 mb-2" id="titular" aria-describedby="titular"
+                    placeholder="Titular de la tarjeta">
+                <div class="d-flex justify-content-between mt-3 mb-5">
+                    <div class="numero-tarjeta d-flex">
+                        <img src="assets/imagenes/tarjeta-mini.svg" alt="img-tarjeta-mini" class="">
+                        <span class="ms-2">
+                            Número de tarjeta
+                        </span>
+                    </div>
+                    <img src="assets/imagenes/utilizar-link.svg" alt="img-utilizar-link" class="">
+                </div>
+                <div class="container-boton-pagar w-100 d-flex justify-content-center">
+                    <button class="d-flex boton-pagar" [ngStyle]="{width: '150px'}">Comprar</button>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+
+    <div class="compra-segura w-100 d-flex justify-content-center mt-3">
+        <span class="w-100">
+            @if (tipoResumenCompra === 'terminarCompra') {
+            <img src="assets/imagenes/compra-segura2.svg" alt="img-compra-segura2" class="me-3 mb-1">
+            }
+            @if (tipoResumenCompra === 'carritoCompras') {
+            <img src="assets/imagenes/compra-segura1.svg" alt="img-compra-segura1" class="compra-segura1 me-3">
+            }
+            Compra 100% segura
+        </span>
+    </div>
+</div>

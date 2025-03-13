@@ -1,0 +1,81 @@
+@mixin pc
+    @media screen and (max-width: 5000px)
+        @content
+
+@mixin mobile
+    @media screen and (max-width: 1140px)
+        @content
+
+.version-mobile
+    @include pc()
+        display: none !important
+    @include mobile()
+        display: flex !important
+    height: 100px
+
+.version-pc
+    @include mobile()
+        display: none
+    height: 200px
+
+.seccion-info
+    height: 75%
+    div
+        height: 100%
+    > div
+        padding: 15px
+
+.seccion-logo
+    width: 20%
+    > div
+        padding: 23px 0px
+
+.seccion-enlaces
+    width: 50%
+
+.seccion-redes-sociales
+    width: 30%
+    img
+        top: -25px
+        position: relative
+        width: 250px !important
+
+.seccion-copyright
+    height: 25%
+    > div
+        border-top: 2px solid #D8FF00
+        line-height: 45px
+    span
+        color: #787664
+        display: inline-block
+        font-family: 'Montserrat'
+        font-size: 16px
+        font-weight: 500
+        line-height: normal
+        vertical-align: middle
+
+.titulo-subseccion
+    color: #0A142F
+    font-size: 18.75px
+    font-weight: 400
+    user-select: none
+
+.subtitulo-subseccion
+    color: #0A142F
+    cursor: pointer
+    font-size: 12px
+    font-weight: 400
+    margin-top: 0 !important
+    margin-bottom: 0rem !important
+    user-select: none
+
+.mb-2-custom
+    margin-bottom: .5rem !important
+
+.item
+    cursor: pointer
+    user-select: none
+    span
+        color: #3440549e
+        font-size: 12px
+        font-weight: 400

@@ -1,0 +1,61 @@
+<div class="custom-header">
+    <div class="parte-superior d-flex">
+        <div class="busqueda-carrito d-flex">
+            <div class="logo">
+                <img class="w-75" src="assets/imagenes/logo.svg" alt="img-logo" sizes="" srcset="">
+            </div>
+            <div class="form-group has-search form-control-feedback mx-3">
+                <!-- <i class="bi bi-search form-control-feedback"></i> -->
+                <img class="form-control-feedback" src="assets/imagenes/header/search.svg" alt="img-search" sizes=""
+                    srcset="">
+                <input type="text" class="form-control" placeholder="">
+            </div>
+        </div>
+        <div class="busqueda-carrito d-flex">
+            <div class="container-registrar-auto">
+                <button>Registra tu auto</button>
+            </div>
+            <div class="d-flex">
+
+                <div class="position-relative">
+                    <span class="fa-2x has-badge" [attr.data-count]="numMensajes" [ngClass]="numMensajes > 0 ? 'fa-stack' : ''">
+                        <img class="icons-compras" src="assets/imagenes/header/mensajes.svg" alt="img-logo">
+                    </span>
+                </div>
+
+                <div class="position-relative">
+                    <span class="fa-2x has-badge" [attr.data-count]="numNotificaciones" [ngClass]="numNotificaciones > 0 ? 'fa-stack' : ''">
+                        <img class="icons-compras" src="assets/imagenes/header/notificacion.svg" alt="img-logo">
+                    </span>
+                </div>
+
+                <div class="position-relative">
+                    <span class="fa-stack fa-2x has-badge" [attr.data-count]="numArtCarritoCompras" [ngClass]="numArtCarritoCompras > 0 ? 'fa-stack' : ''">
+                        <img class="icons-compras" src="assets/imagenes/header/carrito.svg" alt="img-logo" sizes=""
+                            srcset="">
+                    </span>
+                </div>
+
+                <div class="position-relative">
+                    <span class="fa-2x has-badge">
+                        <img class="icons-user" src="assets/imagenes/header/user.svg" alt="img-logo" sizes=""
+                            srcset="">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parte-inferior d-flex">
+        <div class="menu">
+            <span class="item">Categorías</span>
+            <span class="sub-item">Ofertas</span>
+            <span class="sub-item">Tiendas oficiales</span>
+            <span class="sub-item">Vender</span>
+            <span class="sub-item">Marcas</span>
+        </div>
+        <div class="seccion-ingresar">
+            <span>Ingresar</span>
+        </div>
+    </div>
+
+</div>
